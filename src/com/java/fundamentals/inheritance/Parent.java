@@ -1,21 +1,24 @@
-package com.java.basics;
+package com.java.fundamentals.inheritance;
 
 public class Parent {
-    static int staticMember;
-    public int publicMember;
-    private int privateMember;
-    private int privateMemberWithGettersAndSetters;
+    static int staticMember = 1;
+    public int publicMember = 2;
+    private int privateMember = 3;
+    private int privateMemberWithGettersAndSetters = 4;
 
     Parent() {
         System.out.println("Non parameterized parent constructor called");
-    }
+    }/*Gets called automatically when object of Child class is created.
+     However, although the parent constructor is also called, only one Object i.e.,
+     the Child object is created.
+     */
 
     public Parent(int privateMember, int privateMemberWithGettersAndSetters, int publicMember) {
         System.out.println("Parameterized parent constructor called");
         this.privateMember = privateMember;
         this.privateMemberWithGettersAndSetters = privateMemberWithGettersAndSetters;
         this.publicMember = publicMember;
-    }
+    } // Child class,if required,can explicitly call such parameterized constructors using super(....);
 
     public static int getStaticMember() {
         return staticMember;
@@ -55,6 +58,14 @@ public class Parent {
 
     public void parentMethod2() {
         System.out.println("Non static parent method2 called");
+    }
+
+    private void privateMethod() {
+        System.out.println("Parent's privateMethod called");
+    }
+
+    protected void protectedMethod() {
+        System.out.println("Parent's protected method");
     }
 
     @Override

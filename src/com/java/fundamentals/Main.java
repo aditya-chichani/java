@@ -1,4 +1,4 @@
-package com.java.basics;
+package com.java.fundamentals;
 
 public class Main {
 
