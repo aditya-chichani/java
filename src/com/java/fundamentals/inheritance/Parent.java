@@ -5,6 +5,7 @@ public class Parent {
     public int publicMember = 2;
     private int privateMember = 3;
     private int privateMemberWithGettersAndSetters = 4;
+    int toBeOverridenValue = 1000;
 
     Parent() {
         System.out.println("Non parameterized parent constructor called");
@@ -66,6 +67,14 @@ public class Parent {
 
     protected void protectedMethod() {
         System.out.println("Parent's protected method");
+    }
+
+    public int getToBeOverridenValue() {
+        return toBeOverridenValue;
+    }
+
+    public void setToBeOverridenValue(int toBeOverridenValue) {
+        this.toBeOverridenValue = toBeOverridenValue;
     }
 
     @Override

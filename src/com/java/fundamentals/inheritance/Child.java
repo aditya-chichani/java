@@ -2,6 +2,7 @@ package com.java.fundamentals.inheritance;
 
 public class Child extends Parent {
     private int childMember;
+    int toBeOverridenValue = 10;
 
     public static void staticParentMethod1() {
         System.out.println("Child hiding parent's staticParentMethod1");
@@ -28,5 +29,15 @@ public class Child extends Parent {
 
     public void setChildMember(int childMember) {
         this.childMember = childMember;
+    }
+
+    @Override
+    public int getToBeOverridenValue() {
+        return toBeOverridenValue;
+    }
+
+    @Override
+    public void setToBeOverridenValue(int toBeOverridenValue) {
+        this.toBeOverridenValue = toBeOverridenValue;
     }
 }
