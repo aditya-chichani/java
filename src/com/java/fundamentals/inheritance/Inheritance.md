@@ -14,3 +14,4 @@
 to uphold the [Liskov Substitution Principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle). 
 <br>Analogy: A square is simply a special form (subclass) of a rectangle. Therefore, A square must provide access to all the methods that are accessible via a rectangle object.
 2. If instanceof keyword returns true for a particular comparison, the object (It considers the actual object and not the reference being used to store the object) is definitely either of that class or any of its ancestors (Parent, Object class etc. ) 
+3. If the child class is serializable while the super class is not,then the actual values of only the child class specific members will be stored. The members inherited from parent will simply be instantiated to default values by calling the non parameterized constructor of parent class during de-serialization.

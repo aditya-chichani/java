@@ -12,7 +12,9 @@ public class InheritanceDemo {
         parentReferenceContainingChildObject.parentMethod1(); // Child method overrides parent method
         parentReferenceContainingChildObject.parentMethod2(); // Child directly inheriting parent method
 
-        // System.out.println(parentReferenceContainingChildObject.getChildMember()); Compiler error shows that parent Reference cannot access child specific methods/members directly at least not without explicitly typecasting(downcasting)!
+    /* System.out.println(parentReferenceContainingChildObject.getChildMember());
+    Compiler error shows that parent Reference cannot access child specific methods/members directly at least
+    not without explicitly typecasting(downcasting)!*/
 
         System.out.println(childReferenceContainingChildObject.getChildMember());
 
@@ -24,7 +26,8 @@ public class InheritanceDemo {
             Child.staticParentMethod1();
         }
         // ONLY METHODS CAN BE OVERRIDDEN
-        System.out.println(parentReferenceContainingChildObject.toBeOverridenValue); // Prints parent's value: 1000
+        System.out.println(parentReferenceContainingChildObject.toBeOverridenValue); // Prints parent's value: 1000 although the field is NON STATIC. This is because fields are NOT Overridden.
+        // The Child class either simply INHERITS the field or HIDES the field (By defining a field member of the same name in its class)
         System.out.println(parentReferenceContainingChildObject.getToBeOverridenValue());  // Prints child's value: 10
         if (parentReferenceContainingChildObject instanceof Child)
             System.out.println("True");
