@@ -6,12 +6,12 @@
 4. Constructors are anyway not inherited by the subclasses, hence as there is no need for final keyword - we cannot make constructors final.
 5. If a class is made final, it cannot have a subclass. Its methods are **implicitly** declared as final.  
 
-####Abstract class vs Interface
-#####Similarities:
+#### Abstract class vs Interface
+##### Similarities:
 There are only two similarities between an abstract class and an interface:
 1. Neither can be instantiated.
 2. Both can have methods without a body.
-#####Differences:
+##### Differences:
 1. An abstract class is much closer to a normal class than it is to an interface. 
 The only mandatory difference between a normal class and an abstract class is that an object of the abstract class cannot be created.
 2. Abstract class can continue to have non-parameterized/parameterized constructors, non-final non-static variables,non-public final methods etc which it deems can be reused among its concrete classes, and hence, can have a **state**.
@@ -28,7 +28,7 @@ to uphold the [Liskov Substitution Principle](https://en.wikipedia.org/wiki/Lisk
 2. If instanceof keyword returns true for a particular comparison, the object (It considers the actual object and not the reference being used to store the object) is definitely either of that class or any of its ancestors (Parent, Object class etc. ) 
 3. If the child class is serializable while the super class is not,then the actual values of only the child class specific members will be stored. The members inherited from parent will simply be instantiated to default values by calling the non parameterized constructor of parent class during de-serialization.
 4. Whenever equals() method is overridden, it is **strongly** advised to override hashcode() and compareTo() method as well.
-#####Explanation:
+##### Explanation:
 All classes inherit Object class's equals() and hashcode() method. The default implementation of equals() method returns true only if the references of the two objects are same which is analogous
 to using '==' operator to comparing 2 string references instead of using String equals() method.
 Hence, for all practical purposes, equals() method has to be overridden in class if it needs be compared in some fashion.
