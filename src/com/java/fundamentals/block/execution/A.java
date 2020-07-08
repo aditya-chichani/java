@@ -1,4 +1,4 @@
-package com.java.fundamentals.block;
+package com.java.fundamentals.block.execution;
 
 public class A {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.java.fundamentals.inheritance;
+package com.java.fundamentals.inheritance.basicinheritance;
 
 public class Child extends Parent {
     private int childMember;

@@ -1,4 +1,6 @@
-package com.java.fundamentals.inheritance;
+package com.java.fundamentals.inheritance.implementingclassandinterface;
+
+import com.java.fundamentals.inheritance.java8.interfaces.A;
 
 public class E extends D implements F {
     public static void main(String[] args) {

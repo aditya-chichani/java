@@ -1,4 +1,4 @@
-package com.java.fundamentals.block;
+package com.java.fundamentals.block.execution;
 
 public interface I {
   /*  static {

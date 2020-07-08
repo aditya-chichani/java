@@ -1,4 +1,4 @@
-package com.java.fundamentals.inheritance;
+package com.java.fundamentals.inheritance.java8.interfaces;
 
 public interface A {
     void fun();
